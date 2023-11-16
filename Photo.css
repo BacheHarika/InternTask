@@ -1,0 +1,87 @@
+body{
+   
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0px;
+    background-color:black;
+}
+nav {
+   width: 100%;
+   background-color: gray;
+   overflow: auto;
+}
+nav a{
+  width: 100px;
+  display: block;
+  padding: 20px 15px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  font-style: italic;  
+}
+ul{
+    padding: 0;
+    margin: 0 0 0 150px;
+    list-style: none;
+    display: flex;
+    justify-content: center;    
+}
+li{
+    float: left;
+}
+header{
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+nav a:hover{
+    background-color: gray;
+    color: black;
+}
+
+.Parent{
+   /* max-width: 1200px;
+   margin: auto;
+   background-color: gray;
+   overflow: auto; */
+   display: flex;
+flex-wrap: wrap;
+gap: 10px;
+}
+.Gallery{
+    width: 340px;
+    height: 200px;
+border: 2px solid gray;
+padding: 20px;
+}
+.Gallery img{
+    height: 100%;
+    width: 100%; 
+    cursor: pointer; 
+}
+.Gallery:hover{
+    width: 350px;
+    height: 250px;
+}
+.welcome-text{
+    text-align: center;
+    font-style: italic;
+    font-size: 25px;
+    color: gray;
+}
+footer {
+    background-color: gray; 
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 25px;
+   
+}
+
+
+
