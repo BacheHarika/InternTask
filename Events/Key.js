@@ -27,3 +27,10 @@ function detect(){
 document.addEventListener('keydown', displayKeyEventDetails);
 document.addEventListener('keyup', resetContent);
 
+
+
+
+
+
+
+

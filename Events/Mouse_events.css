@@ -84,3 +84,11 @@ h2{
     align-items: center;
     justify-content: center;
 }
+
+#drawing-container {
+    border: 1px solid #000;
+}
+
+#drawing-canvas {
+    cursor: crosshair;
+}
