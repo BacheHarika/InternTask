@@ -69,3 +69,28 @@ h2{
     padding: 10px; 
     font-style: italic;
 }
+
+#focusHighlighter {
+    text-align: center;
+}
+
+input, button {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+
+}
+
+input:focus, button:focus {
+    background-color: #3498db;
+    color:white;
+    outline: none;
+    border: 2px solid rgb(30, 255, 0);
+}
+
+input:focus, input:active, button:focus, button:active {
+    background-color: #3498db;
+    color: #fff;
+    outline: none;
+}

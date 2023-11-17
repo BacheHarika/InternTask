@@ -68,6 +68,7 @@ h2{
     color:#333; 
     padding: 10px; 
     font-style: italic;
+    text-align: center;
 }
 #colorChanger {
     width: 200px;
@@ -77,4 +78,9 @@ h2{
     transition: background-color 0.3s ease-in-out;
     display: flex;
     align-items: center;
+}
+.Mouse-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
