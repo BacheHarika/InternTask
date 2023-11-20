@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Arrays in Table</title>
+    <style>
+       body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: white;
+}
+p {
+            margin-bottom: 250px; 
+            margin-top: 20px; 
+            font-size: 30px;
+            text-transform: uppercase;
+            font-style: italic;
+            color: purple;
+        }
+h2, #searchBar, table {
+    margin-top: 20px; 
+
+}
+        table {
+            border-collapse: collapse;
+            width: 60%; 
+            margin-top: 20px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 1px;
+            box-shadow:0 2px 12px purple;
+
+            
+        }
+
+        th, td {
+            border: 2px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: purple;
+            color: white;
+        }
+
+        tbody tr:nth-child(even) td {
+            background-color: plum;
+        }
+
+        #searchBar {
+            margin-top: -213px;
+    padding: 8px;
+    width: 46%;
+    border: 3PX SOLID plum;
+    border-radius: 30px;
+
+}
+    </style>
+</head>
+
+<body>
+<p>ARRAYS TABLE</p>
+    <input type="text" id="searchBar" oninput="filterTable()" placeholder="Search by name">
+
+    <table>
+        <thead>
+            <tr>
+                <th></i>ID</th>
+                <th>NAME</th>
+                <th>AGE</th>
+                <th>PLACE</th>
+            </tr>
+        </thead>
+        <tbody id="arrayTableBody"></tbody>
+    </table>
+
+    <script>
+        var peopleArray = [
+            { id: 1, name: 'John Doe', age: 25, place: 'Hyderbad' },
+            { id: 2, name: 'Jane Smith', age: 30, place: 'Tirupathi' },
+            { id: 3, name: 'Bob Johnson', age: 22, place: 'Kelera' },
+            { id: 3, name: 'Hari', age: 28, place: 'City Annathapur' },
+            { id: 3, name: 'Harika', age: 27, place: 'Penukonda' },
+            { id: 3, name: 'Rio', age: 70, place: 'Chennai' },
+            { id: 3, name: 'Scotch', age: 56, place: 'Banglore' },
+            { id: 3, name: 'Nani', age: 78, place: 'Hindupur' },
+        ];
+
+        function populateTable() {
+            var tableBody = document.getElementById("arrayTableBody");
+            tableBody.innerHTML = "";
+
+            for (var i = 0; i < peopleArray.length; i++) {
+                var row = tableBody.insertRow();
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                var cell4 = row.insertCell(3);
+
+                cell1.innerHTML = peopleArray[i].id;
+                cell2.innerHTML = peopleArray[i].name;
+                cell3.innerHTML = peopleArray[i].age;
+                cell4.innerHTML = peopleArray[i].place;
+            }
+        }
+
+        function filterTable() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("searchBar");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("arrayTableBody");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[1];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    tr[i].style.display = txtValue.toUpperCase().includes(filter) ? "" : "none";
+                }
+            }
+        }
+
+        populateTable();
+    </script>
+
+</body>
+
+</html>
+
+
